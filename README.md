@@ -5,13 +5,13 @@ From the OOBE Screen press Shift + F10
 # Türkçe
 
 ```
-curl -L gokhanturk.com/bypasstr -o skip.cmd
+curl -L gokhanturk.com/winstalltr -o skip.cmd
 skip.cmd
 ```
 # English
 
 ```
-curl -L gokhanturk.com/bypasseng -o skip.cmd
+curl -L gokhanturk.com/winstalleng -o skip.cmd
 skip.cmd
 ```
 
