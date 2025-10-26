@@ -2,13 +2,13 @@
 
 From the OOBE Screen press Shift + F10
 
-# Türkçe
+## Türkçe
 
 ```
 curl -L gokhanturk.com/winstalltr -o skip.cmd
 skip.cmd
 ```
-# English
+## English
 
 ```
 curl -L gokhanturk.com/winstalleng -o skip.cmd
