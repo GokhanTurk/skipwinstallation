@@ -1,2 +1,2 @@
 curl -L -o C:\Windows\Panther\unattendedeng.xml https://raw.githubusercontent.com/GokhanTurk/skipwinstallation/refs/heads/main/unattendedeng.xml
-%WINDIR%\System32\Sysprep\Sysprep.exe /oobe /unattend:C:\Windows\Panther\unattendedeng.xml /reboot
+%WINDIR%\System32\Sysprep\Sysprep.exe /generalize /oobe /unattend:C:\Windows\Panther\unattendedeng.xml /reboot
