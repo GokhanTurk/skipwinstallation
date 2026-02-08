@@ -32,7 +32,7 @@ goto MainMenu
 cls
 echo [INFO] Turkce yapilandirma indiriliyor...
 if not exist "C:\Windows\Panther" mkdir "C:\Windows\Panther"
-curl -L -o "C:\Windows\Panther\unattendedtr.xml" "https://raw.githubusercontent.com/GokhanTurk/skipwinstallation/refs/heads/feature/test/unattendedtr.xml"
+curl -L -o "C:\Windows\Panther\unattendedtr.xml" "https://raw.githubusercontent.com/GokhanTurk/skipwinstallation/refs/heads/main/unattendedtr.xml"
 if %errorlevel% neq 0 (
     echo [ERROR] Dosya indirilemedi! Internet baglantinizi kontrol edin.
     pause
@@ -46,7 +46,7 @@ goto End
 cls
 echo [INFO] Downloading English configuration...
 if not exist "C:\Windows\Panther" mkdir "C:\Windows\Panther"
-curl -L -o "C:\Windows\Panther\unattendedeng.xml" "https://raw.githubusercontent.com/GokhanTurk/skipwinstallation/refs/heads/feature/test/unattendedeng.xml"
+curl -L -o "C:\Windows\Panther\unattendedeng.xml" "https://raw.githubusercontent.com/GokhanTurk/skipwinstallation/refs/heads/main/unattendedeng.xml"
 if %errorlevel% neq 0 (
     echo [ERROR] Failed to download file! Check internet connection.
     pause
