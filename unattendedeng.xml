@@ -1486,27 +1486,6 @@ try {
         Write-Log "Failed to create WinhanceInstall.ps1: $($_.Exception.Message)" "ERROR"
     }
 
-    # Create desktop shortcut for Winhance installer
-    try {
-        $targetFile = Join-Path $scriptsDir "WinhanceInstall.ps1"
-        $shortcutPath = "C:\Users\Default\Desktop\Install Winhance.lnk"
-        $WshShell = New-Object -ComObject WScript.Shell
-        $shortcut = $WshShell.CreateShortcut($shortcutPath)
-        $shortcut.TargetPath = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
-        $shortcut.Arguments = "-ExecutionPolicy Bypass -NoProfile -File `"$targetFile`""
-        $shortcut.IconLocation = "C:\Windows\System32\appwiz.cpl,0"
-        $shortcut.WorkingDirectory = "C:\Windows\System32"
-        $shortcut.Description = "Launch Winhance Installer with Administrator Privileges"
-        $shortcut.Save()
-        $bytes = [System.IO.File]::ReadAllBytes($shortcutPath)
-        $bytes[21] = 34
-        [System.IO.File]::WriteAllBytes($shortcutPath, $bytes)
-        Write-Log "Created desktop shortcut: $shortcutPath" "SUCCESS"
-    } catch {
-        Write-Log "Failed to create desktop shortcut: $($_.Exception.Message)" "ERROR"
-    }
-
-
     # ============================================================================
     # POWER PLAN & POWERCFG SETTINGS
     # ============================================================================
